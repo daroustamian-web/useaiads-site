@@ -1,0 +1,22 @@
+{
+  "careconnect-adhc": {
+    "name": "Care Connect ADHC",
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/CALENDAR_ID_HERE",
+    "city": "Tehachapi",
+    "state": "CA",
+    "phone": "+13107704558",
+    "logo": "https://msgsndr-private.storage.googleapis.com/locationPhotos/a131d05b-19cd-4036-bdc3-31387e4e33e0.png",
+    "ghlLocationId": "gRJYqLytBNhGjMmPDXXX",
+    "active": true
+  },
+  "_example": {
+    "name": "Brightwood Home Care",
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/CALENDAR_ID_HERE",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "",
+    "logo": "",
+    "ghlLocationId": "",
+    "active": false
+  }
+}

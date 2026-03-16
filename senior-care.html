@@ -82,6 +82,14 @@
 
     .hero-note { font-size: 14px; color: var(--mid); margin-top: 16px; }
 
+    /* Proof badge */
+    .proof-badge { display: inline-flex; align-items: center; gap: 16px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px 24px; margin-bottom: 32px; text-align: left; max-width: 520px; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+    .proof-badge img { width: 56px; height: 56px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+    .proof-badge-text { font-size: 14px; color: var(--mid); line-height: 1.5; }
+    .proof-badge-text strong { color: var(--black); }
+    .proof-badge-text .proof-stats { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; }
+    .proof-badge-text .proof-stat { font-size: 12px; font-weight: 700; color: var(--black); background: var(--off); padding: 3px 10px; border-radius: 100px; }
+
     /* ===== PROOF ===== */
     .proof { padding: 64px 24px; background: var(--off); }
     .proof-header { text-align: center; margin-bottom: 32px; }
@@ -94,11 +102,21 @@
     .proof-metric .val { font-family: var(--serif); font-size: 36px; font-style: italic; color: var(--black); line-height: 1; }
     .proof-metric .lbl { font-size: 10px; color: var(--mid); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 4px; }
 
+    /* ===== VIDEO ===== */
+    .video-section { background: var(--black); padding: 64px 24px; }
+    .video-section-header { text-align: center; margin-bottom: 32px; }
+    .video-section-header p { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #9a9da8; }
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1060px; margin: 0 auto; }
+    .video-grid-item { position: relative; }
+    .video-grid-item iframe { width: 100%; aspect-ratio: 744/504; border-radius: 12px; }
+    .video-grid-label { text-align: center; margin-top: 10px; font-size: 14px; color: #9a9da8; font-weight: 500; }
+
     /* ===== CTA / BOOKING ===== */
     .cta { background: var(--black); color: white; text-align: center; padding: 80px 24px; }
     .cta h2 { font-family: var(--serif); font-size: clamp(28px, 4.5vw, 44px); color: white; letter-spacing: -.02em; margin-bottom: 12px; line-height: 1.15; }
     .cta p { color: #9a9da8; font-size: 16px; max-width: 480px; margin: 0 auto 40px; line-height: 1.6; }
     #cal-embed { width: 100%; min-height: 600px; border-radius: 16px; overflow: hidden; }
+    #cal-embed iframe { width: 100%; min-height: 600px; border: none; overflow: hidden; }
 
     /* Footer */
     footer { padding: 28px 24px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -111,6 +129,9 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .proof-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
+      .proof-badge { flex-direction: column; text-align: center; align-items: center; }
+      .proof-badge-text .proof-stats { justify-content: center; }
       .mobile-float { display: block; }
       body { padding-bottom: 72px; }
       .stats-row { gap: 24px; }
@@ -142,18 +163,15 @@
       <div class="guarantee-sub">No conditions. No hoops. Month-to-month, cancel anytime.</div>
     </div>
 
-    <div class="stats-row">
-      <div class="stat">
-        <div class="val">654</div>
-        <div class="lbl">Exclusive Leads</div>
-      </div>
-      <div class="stat">
-        <div class="val">$16</div>
-        <div class="lbl">Avg Cost / Lead</div>
-      </div>
-      <div class="stat">
-        <div class="val">72hrs</div>
-        <div class="lbl">To Go Live</div>
+    <div class="proof-badge">
+      <img src="/daniel-headshot.jpg" alt="Daniel Aroustamian" />
+      <div class="proof-badge-text">
+        <strong>Daniel Aroustamian</strong> &mdash; Exclusive growth systems for home care agencies
+        <div class="proof-stats">
+          <span class="proof-stat">318 leads &middot; AZ</span>
+          <span class="proof-stat">336 leads &middot; NJ</span>
+          <span class="proof-stat">$16 avg CPL</span>
+        </div>
       </div>
     </div>
 
@@ -212,9 +230,36 @@
     <div style="max-width:680px;margin:0 auto;">
       <h2>Check If Your Territory Is Available</h2>
       <p>Pick a time. We will show you exactly how this works for your agency and your service area.</p>
-      <div id="cal-embed"></div>
+      <div id="cal-embed">
+        <iframe src="https://link.careconnectinc.com/widget/booking/F357UjoHKds6eQgwxaBY" style="width:100%;min-height:600px;border:none;overflow:hidden;" scrolling="no" id="F357UjoHKds6eQgwxaBY_1773635800095"></iframe>
+      </div>
     </div>
   </section>
+
+  <!-- ===== VIDEO EXAMPLES ===== -->
+  <div class="video-section">
+    <div class="video-section-header">
+      <p>Example Ad Content We Run</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-grid-item">
+        <iframe src="https://veed.io/embed/0dc41c62-8651-4a11-aef9-f078bab1e64c?watermark=0&color=&sharing=1&title=1" frameborder="0" title="Unlock Parents' Hidden Homecare" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p class="video-grid-label">Unlock Parents' Hidden Homecare</p>
+      </div>
+      <div class="video-grid-item">
+        <iframe src="https://veed.io/embed/43ba18c3-1770-4c22-ae64-7d28c9351fd3?watermark=0&color=&sharing=1&title=1" frameborder="0" title="Prevent Deadly Medication Mixes" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p class="video-grid-label">Prevent Deadly Medication Mixes</p>
+      </div>
+      <div class="video-grid-item">
+        <iframe src="https://veed.io/embed/c22fbef3-7fcc-4d78-8660-c7ba496f132b?watermark=0&color=&sharing=1&title=1" frameborder="0" title="RN-Owned Care Prevents Hospitalizations" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p class="video-grid-label">RN-Owned Care Prevents Hospitalizations</p>
+      </div>
+      <div class="video-grid-item">
+        <iframe src="https://veed.io/embed/db0d8605-128d-4734-880c-f8720ad370e1?watermark=0&color=&sharing=1&title=1" frameborder="0" title="Bring Care To Her" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p class="video-grid-label">Bring Care To Her</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -227,26 +272,8 @@
     <a href="#book">Book a Call</a>
   </div>
 
-  <!-- Cal.com embed -->
-  <script type="text/javascript">
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal; let ar = arguments;
-        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
-        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", { origin: "https://cal.com" });
-    Cal("inline", {
-      elementOrSelector: "#cal-embed",
-      calLink: "daniel-aroustamian/adsmanagement",
-      layout: "month_view"
-    });
-    Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#c5604a" } } });
-  </script>
+  <!-- GHL Booking Widget -->
+  <script src="https://link.careconnectinc.com/js/form_embed.js" type="text/javascript"></script>
 
   <script>
     // Lead event on CTA clicks
